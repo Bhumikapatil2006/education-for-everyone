@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Available Courses</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/register">Register</a>
+        <a href="/add-course">Add a Course</a>
+    </nav>
+    <div class="container">
+        <ul>
+            {% for course in courses %}
+            <li>
+                <strong>{{ course.title }}</strong>: {{ course.description }} 
+                (Accessibility: {{ course.accessibility_features }})
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <footer>
+        <p>&copy; 2025 Inclusive Education Hub | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
