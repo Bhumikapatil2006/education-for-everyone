@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Course</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Add a New Course</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/register">Register</a>
+        <a href="/courses">Courses</a>
+    </nav>
+    <div class="container">
+        <form action="/add-course" method="POST">
+            <label for="title">Course Title:</label>
+            <input type="text" name="title" required><br>
+            <label for="description">Description:</label>
+            <textarea name="description" required></textarea><br>
+            <label for="accessibility_features">Accessibility Features:</label>
+            <input type="text" name="accessibility_features"><br>
+            <button type="submit">Add Course</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2025 Inclusive Education Hub | All Rights Reserved</p>
+    </footer>
+</body>
+</html>
